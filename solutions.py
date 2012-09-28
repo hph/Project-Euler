@@ -29,7 +29,7 @@ def problem_7():
 
 
 def problem_10():
-    pass
+    return sum(primes_under(2000000))
 
 
 def problem_15():
@@ -53,7 +53,7 @@ def problem_48():
 
 
 def main():
-    solved = [1, 2, 4, 6, 7, 15, 16, 20, 29, 48]
+    solved = [1, 2, 4, 6, 7, 10, 15, 16, 20, 29, 48]
     if len(argv) > 0:
         args = argv[1:]
     for problem in solved:

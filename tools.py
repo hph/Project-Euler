@@ -102,3 +102,15 @@ def primes(number):
             index += 1
             yield num
         num += 2
+
+
+def primes_under(number):
+    '''Yield primes below number.'''
+    if number > 0:
+        yield 2
+    num, index = 3, 1
+    while num < number:
+        if is_prime(num):
+            index += 1
+            yield num
+        num += 2
