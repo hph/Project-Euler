@@ -2,6 +2,7 @@
 #coding=utf8
 
 from math import factorial
+from subprocess import check_output
 from sys import argv
 from time import time
 from tools import *
@@ -13,6 +14,10 @@ def problem_1():
 
 def problem_2():
     return sum(x for x in fibonacci(4000000) if not x % 2)
+
+
+def problem_3():
+    return check_output('factor 600851475143', shell=True).split()[-1]
 
 
 def problem_4():
@@ -53,7 +58,7 @@ def problem_48():
 
 
 def main():
-    solved = [1, 2, 4, 6, 7, 10, 15, 16, 20, 29, 48]
+    solved = [1, 2, 3, 4, 6, 7, 10, 15, 16, 20, 29, 48]
     if len(argv) > 0:
         args = argv[1:]
     for problem in solved:
