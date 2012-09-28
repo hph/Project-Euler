@@ -24,6 +24,14 @@ def problem_6():
                - pow(sum(x for x in xrange(101)), 2))
 
 
+def problem_7():
+    return [p for p in primes(10001)][-1]
+
+
+def problem_10():
+    pass
+
+
 def problem_15():
     return binomial_coefficient(40, 20)
 
@@ -45,16 +53,17 @@ def problem_48():
 
 
 def main():
-    solved = [1, 2, 4, 6, 15, 16, 20, 29, 48]
+    solved = [1, 2, 4, 6, 7, 15, 16, 20, 29, 48]
     if len(argv) > 0:
         args = argv[1:]
     for problem in solved:
-        t = time()
         print 'Problem #%s' % problem
+        t = time()
         solution = globals()['problem_%s' % problem]()
+        timing = float(time() - t)
         if '-s' in args:
             print 'Solution: %s' % solution
-        print 'Time: %.6f s\n' % float(time() - t)
+        print 'Time: %.6f s\n' % timing
 
 
 if __name__ == '__main__':
