@@ -114,3 +114,18 @@ def primes_under(number):
             index += 1
             yield num
         num += 2
+
+
+def prime_factors(number):
+    '''Return any prime factors of 'number' once.'''
+    return [p for p in primes(number) if not number % p]
+
+
+def gcd(a, b):
+    '''Return greatest common divisor of two numbers.'''
+    return b and gcd(b, a % b) or a
+
+
+def lcm(a, b):
+    '''Return the least common multiple of two numbers.'''
+    return a * b / gcd(a, b)
