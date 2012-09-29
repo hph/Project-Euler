@@ -2,6 +2,7 @@
 #coding=utf8
 
 from math import factorial, sqrt
+from fractions import gcd
 
 
 PRIMES = (2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61,
@@ -119,11 +120,6 @@ def primes_under(number):
 def prime_factors(number):
     '''Return any prime factors of 'number' once.'''
     return [p for p in primes(number) if not number % p]
-
-
-def gcd(a, b):
-    '''Return greatest common divisor of two numbers.'''
-    return b and gcd(b, a % b) or a
 
 
 def lcm(a, b):
