@@ -117,11 +117,6 @@ def primes_under(number):
         num += 2
 
 
-def prime_factors(number):
-    '''Return any prime factors of 'number' once.'''
-    return [p for p in primes(number) if not number % p]
-
-
 def lcm(a, b):
     '''Return the least common multiple of two numbers.'''
     return a * b / gcd(a, b)

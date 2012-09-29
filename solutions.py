@@ -63,7 +63,7 @@ def problem_48():
 
 
 def main():
-    solved = [1, 2, 3, 4, 5, 6, 7, 10, 15, 16, 20, 29, 48]
+    solved = range(1, 8) + [10, 15, 16, 20, 29, 48]
     if len(argv) > 0:
         args = argv[1:]
     for problem in solved:
