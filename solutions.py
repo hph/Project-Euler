@@ -22,7 +22,12 @@ def problem_3():
 
 def problem_4():
     return max(filter(is_palindrome, (x * y for x in xrange(999, 99, -1)
-                                            for y in xrange(999, 99, -1))))
+                                            for y in xrange(x, 99, -1))))
+
+
+def problem_5():
+    return reduce(lcm, range(2, 21))
+
 
 def problem_6():
     return abs(sum(pow(x, 2) for x in xrange(101))
@@ -58,7 +63,7 @@ def problem_48():
 
 
 def main():
-    solved = [1, 2, 3, 4, 6, 7, 10, 15, 16, 20, 29, 48]
+    solved = [1, 2, 3, 4, 5, 6, 7, 10, 15, 16, 20, 29, 48]
     if len(argv) > 0:
         args = argv[1:]
     for problem in solved:
