@@ -87,7 +87,7 @@ def is_prime(number):
             break
         elif not number % prime:
             return False
-    for x in xrange(last_prime, int(sqrt(number)) + 1, 2):
+    for x in xrange(last_prime, limit + 1, 2):
         if not number % x:
             return False
     return True
