@@ -73,6 +73,16 @@ def problem_8():
                                    for i in xrange(len(n) - 4))
 
 
+def problem_9():
+    '''There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+    Find the product abc.'''
+    for x in xrange(1000):
+        for y in xrange(x):
+            z = 1000 - x - y
+            if pow(x, 2) + pow(y, 2) == pow(z, 2):
+                return reduce(mul, [x, y, z])
+
+
 def problem_10():
     '''Find the sum of all the primes below two million.'''
     # Five times faster with PyPy.
@@ -107,7 +117,7 @@ def problem_48():
 
 
 def main():
-    solved = range(1, 9) + [10, 15, 16, 20, 29, 48]
+    solved = range(1, 11) + [15, 16, 20, 29, 48]
     results = []
     for problem in solved:
         t = time()
