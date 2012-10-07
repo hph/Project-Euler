@@ -21,7 +21,7 @@ Sample output with Python 2.7.3:
      029 | 0.013155 | 9183
      048 | 0.009005 | 9110846700
 
-And with PyPy 1.8.0 with GCC 4.6.2:
+And with PyPy 1.8.0 and GCC 4.6.2:
 
     $ pypy solutions.py
      #   | Time (s) | Solution
